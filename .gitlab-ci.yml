@@ -1,0 +1,8 @@
+variables:
+  GIT_STRATEGY: none
+  
+job1:
+  script:
+    - echo $CI_JOB_TOKEN
+  rules:
+    - if: $CI_PIPELINE_SOURCE == 'merge_request_event'
